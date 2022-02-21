@@ -1,0 +1,42 @@
+# Python If-Else
+n = int(input())
+if n % 2:
+    print("Weird")
+elif 2 <= n <= 5:
+    print("Not Weird")
+elif 6 <= n <= 20:
+    print("Weird")
+else:
+    print("Not Weird")
+    
+# Arithmetic Operators
+a = int(input())
+b = int(input())
+print(a+b)
+print(a-b)
+print(a*b)
+
+# Python: Division
+a = int(input())
+b = int(input())
+print(a//b)
+print(a/b)
+
+# Loops
+n = int(input())
+print(*[num**2 for num in range(n)], sep='\n')
+or
+n = int(input())
+for i in range(n):
+    print(i**2)
+    
+# Write a function
+def is_leap(year):
+    leap = False
+    # Write your logic here
+    if (year %4 == 0 )and (year %100 != 0 or year % 400 == 0):
+        leap = True
+    return leap
+
+year = int(input())
+print(is_leap(year))
