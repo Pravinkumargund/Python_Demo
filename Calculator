@@ -26,6 +26,33 @@ else:
     print("Invalid operation")
     
 ====================================================================================================================  
-    
-# Make Faulty Calculator
 
+# Design a calculator which will correctly solve all the problems except the following ones:
+# 45 * 3 = 555, 56+9 = 77, 56/6 = 4
+# Your program should take operator and the two numbers as input from the user and then return the result
+
+num1 = int(input("1st number: "))
+num2 = int(input("2nd number: "))
+op = input("+,-,*,/,**,%: ")
+
+if (op == '+'):
+    if ((num1 == 56 and num2 == 9)or(num2 == 56 and num1 == 9)):
+        print("Ans is 77")
+    else:
+        print("The addition of 2 num is :", num1+num2)
+if (op == '*'):
+    if((num1 == 45 and num2 == 3)or(num1 == 3 and num2 == 45)):
+        print("Ans is 555")
+    else:
+        print("The mul is :", num1*num2)
+if (op == '/'):
+    if ((num1 == 56 and num2 == 6)or(num1 == 6 and num2 == 56)):
+        print("Ans is 4")
+    else:
+        ("Div of 2 num is ", num1 / num2)
+elif (op == '-'):
+    print("The Subtrsction of 2 num is :", num1 - num2)
+elif (op == '%'):
+    print("The modulas of 2 num is :", num1 % num2)
+else:
+    print("Invalid operator")
