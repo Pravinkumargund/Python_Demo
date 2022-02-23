@@ -1,0 +1,31 @@
+# Simple calculator using if else condition #
+
+first = input("Enter First number : ")
+operator = input("Enter a Operator (+, -, *, /, %) : ")
+second = input("Enter Second number : ")
+
+first = int(first) # type casting str to int
+second = int(second) # type casting str to int
+
+if operator == "+":
+    print("The O/P of First and Second is : " , first + second)
+    
+elif operator == "-":
+    print("The O/P of First and Second is : " , first - second)
+    
+elif operator == "*":
+    print("The O/P of First and Second is : " , first * second)
+    
+elif operator == "/":
+    print("The O/P of First and Second is : " , first / second)
+    
+elif operator == "%":
+    print("The O/P of First and Second is : " , first % second)
+    
+else:
+    print("Invalid operation")
+    
+====================================================================================================================  
+    
+# Make Faulty Calculator
+
