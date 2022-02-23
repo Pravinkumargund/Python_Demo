@@ -1,0 +1,123 @@
+# Q1. Write a program to reverse given string
+
+Ans1. Using Slice Operator
+string = "Python"
+reverse = string[::-1]
+print(reverse)
+
+Ans2. Taking I/P from user
+string = input("Enter a String for reverse order : ")
+reverse = string[::-1]
+print("The reverse string O/P is :" ,reverse)
+
+=================================================================================================================================
+
+# Q2. Program to REVERSE content of the given STRING
+
+Ans1. By using reversed() function
+string = "Python"
+reverse=reversed(string)
+for i in reverse:
+    print(i,end='')
+    
+Ans2. Without using loop/ using join method and reversed function
+string = "Python"
+reverse=reversed(string)
+output=''.join(reverse)
+print(output)
+
+================================================================================================================================
+
+# Q3. Program to REVERSE content of the given STRING by using while loop
+
+string = input("Type string for reverse order: ")
+output=''
+i=(len(string)-1)
+while i>=0:
+    output=output+string[i]
+    i = i-1
+print(output)
+
+=================================================================================================================================
+
+# Q4. Program to REVERSE order of words
+
+s = input("Enter some string: ")
+l = s.split() # split the string by using split operator ie. get list of words
+print(l)
+l1=l[::-1] # reversed string by using slice
+print(l1)
+output=' '.join(l1) # space seperator & .join used for list to string with reversed order
+print(output)
+
+==================================================================================================================================
+
+# Q5. write a program to reversed internal content of each word
+s = "my name is john"
+l = s.split()
+print(l)
+l1=[]
+for word in l:
+    l1.append(word[::-1])
+print(l1)
+output=' '.join(l1)
+print(output)
+
+=================================================================================================================================
+
+#Q6 Program to reverse internal content of every 2nd word present in given string
+s = 'one two three four five six'
+l=s.split()
+print(l)
+i = 0
+l1=[]
+while i<len(l):
+    if i%2 ==0:
+        l1.append(l[i])
+    else:
+        l1.append(l[i][::-1])
+    i=i+1
+print(l1)
+output=' '.join(l1)
+print(output)
+
+=================================================================================================================================
+
+#Q7 Write a program to print charactor present at even and odd index seperately for the given string
+
+s = input("Enter a string :")
+i = 0 # for even index
+print("Character present at even index: ")
+while i<(len(s)):
+    print(s[i], end=" ")
+    i=i+2
+    
+s = input("Enter a string")
+i = 1 # for odd index
+print("Character present at odd index: ")
+while i<(len(s)):
+    print(s[i], end= ' ')
+    i=i+2
+
+# Using Slice opeartor
+s = input("Enter the string: ")
+print("Character present at even index : ",s[::2])
+print("Character present at odd index : ",s[1::2])
+
+============================================================================================================================
+
+#Q8 Assume input string content only alphabet symbols and digit. write a program to sort character of the string,----
+#----first alphabet symbol followed by digit. || input: B4A1D3 output: ABD134
+
+s = input("Enter some alphanumeric String to sort: ")
+alphabets = []
+digit = []
+for ch in s:
+    if ch.isalpha():
+        alphabets.append(ch)
+    else:
+        digit.append(ch)
+output=''.join(sorted(alphabets)+(sorted(digit)))
+print(output)
+
+==============================================================================================================================
