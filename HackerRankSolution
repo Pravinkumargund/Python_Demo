@@ -54,4 +54,23 @@ if __name__ == '__main__':
     req = [l for l in perm if sum(l)!= n]
     print(req)
 
-#
+# String Split and Join
+
+def split_and_join(line):
+    # write your code here
+    return'-'.join(line.split(" "))
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
+
+# What's Your Name? 
+
+def print_full_name(first, last):
+    # Write your code here
+  OR#print("Hello {} {}! You just delved into python.".format(first,last))
+    print("Hello %s %s! You just delved into python."%(first,last))
+if __name__ == '__main__':
+    first_name = input()
+    last_name = input()
+    print_full_name(first_name, last_name)
